@@ -14,6 +14,7 @@ public class Solution {
 		// Scanner sc = new Scanner(System.in);
 		String file = "WebContent.txt";
         String method = sc.nextLine();
+        System.out.println("...........");
         int vertices = Integer.parseInt(sc.nextLine());
         int edges = Integer.parseInt(sc.nextLine());
         Graph g = new Graph(vertices);

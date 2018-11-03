@@ -10,56 +10,58 @@ class WebSearch {
 
 public class Solution {
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
+		// Scanner sc = new Scanner(System.in);
 		String file = "WebContent.txt";
-        String method = scan.nextLine();
-        int vertices = Integer.parseInt(scan.nextLine());
-        int edges = Integer.parseInt(scan.nextLine());
+        String method = sc.nextLine();
+        int vertices = Integer.parseInt(sc.nextLine());
+        int edges = Integer.parseInt(sc.nextLine());
         Graph g = new Graph(vertices);
-        String[] inputs = scan.nextLine().split(",");
-        if (inputs.length > 2) {
-            for (int i = 0; i < edges; i++) {
-                String[] tokens = scan.nextLine().split(" ");
+        String[] inputs = sc.nextLine().split(",");
+        // if (inputs.length > 2) {
+            
+        // }
+        for (int i = 0; i < edges; i++) {
+                String[] tokens = sc.nextLine().split(" ");
                 g.addEdge(Integer.parseInt(tokens[0]),
                  Integer.parseInt(tokens[1]));
             }
-        }
         System.out.println(g.v() + " vertices, " + g.e() + " edges");
         // if (inputs.length < 2) {
         //     System.out.println("No edges");
         //     return;
         // }
-        // switch (method) {
-        // case "Matrix":
-        //     Bag<Integer>[] adj = g.matrix();
-        //     int[][] matrix = new int[vertices][vertices];
-        //     for (int i = 0; i < vertices; i++) {
-        //         for (int j = 0; j < vertices; j++) {
-        //             if (g.hasEdge(i, j)) {
-        //                 matrix[i][j] = 1;
-        //             }
-        //         }
-        //     }
-        //     for (int i = 0; i < vertices; i++) {
-        //         for (int j = 0; j < vertices; j++) {
-        //             System.out.print(matrix[i][j] + " ");
-        //         }
-        //         System.out.println();
-        //     }
-        //     break;
-        // case "List":
-        //     g.list();
-        //     adj = g.list();
-        //     for (int v = 0; v < vertices; v++) {
-        //         System.out.print((inputs[v] + ": "));
-        //         for (int w : adj[v]) {
-        //             System.out.print((inputs[w] + " "));
-        //         }
-        //         System.out.print("\n");
-        //     }
-        //     break;
-        // default:
-        // }
+        switch (method) {
+        case "Matrix":
+            Bag<Integer>[] adj = g.matrix();
+            int[][] matrix = new int[vertices][vertices];
+            for (int i = 0; i < vertices; i++) {
+                for (int j = 0; j < vertices; j++) {
+                    if (g.hasEdge(i, j)) {
+                        matrix[i][j] = 1;
+                    }
+                }
+            }
+            for (int i = 0; i < vertices; i++) {
+                for (int j = 0; j < vertices; j++) {
+                    System.out.print(matrix[i][j] + " ");
+                }
+                System.out.println();
+            }
+            break;
+        case "List":
+            g.list();
+            adj = g.list();
+            for (int v = 0; v < vertices; v++) {
+                System.out.print((inputs[v] + ": "));
+                for (int w : adj[v]) {
+                    System.out.print((inputs[w] + " "));
+                }
+                System.out.print("\n");
+            }
+            break;
+        default:
+        }
 		// read the first line of the input to get the number of vertices
 		
 		// iterate count of vertices times 

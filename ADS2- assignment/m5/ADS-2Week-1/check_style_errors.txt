@@ -286,6 +286,7 @@ Audit done.
 Checkstyle ends with 34 errors.
 Starting audit...
 [ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m5\ADS-2Week-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m5\ADS-2Week-1\Solution.java:1: Using the '.*' form of import should be avoided - java.util.*. [AvoidStarImport]
 [ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m5\ADS-2Week-1\Solution.java:2: Missing a Javadoc comment. [JavadocType]
 [ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m5\ADS-2Week-1\Solution.java:3: Line has trailing spaces. [RegexpSingleline]
 [ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m5\ADS-2Week-1\Solution.java:3:1: File contains tab characters (this is the first instance). [FileTabCharacter]
@@ -310,7 +311,7 @@ Starting audit...
 [ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m5\ADS-2Week-1\Solution.java:87: Line has trailing spaces. [RegexpSingleline]
 [ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m5\ADS-2Week-1\Solution.java:88: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 24 errors.
+Checkstyle ends with 25 errors.
 Starting audit...
 [ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m5\ADS-2Week-1\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m5\ADS-2Week-1\Stack.java:13: Line has trailing spaces. [RegexpSingleline]

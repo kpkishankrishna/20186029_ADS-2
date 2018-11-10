@@ -22,7 +22,7 @@ public class Solution {
 		switch (caseToGo) {
 		case "Graph":
 			//Print the Graph Object.
-			System.out.println(wg);
+			System.out.println(wg.toString());
 			break;
 
 		case "DirectedPaths":

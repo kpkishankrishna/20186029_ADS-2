@@ -1,83 +1,21 @@
 Starting audit...
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:8: Line has trailing spaces. [RegexpSingleline]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:34: Line has trailing spaces. [RegexpSingleline]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:35: Line has trailing spaces. [RegexpSingleline]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:38: Line is longer than 80 characters (found 82). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:43: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:45: Line is longer than 80 characters (found 105). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:54:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:55:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:58: Missing a Javadoc comment. [JavadocType]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:59:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:60:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:95:21: Parameter item should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:105: Line is longer than 80 characters (found 87). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:107: Line is longer than 80 characters (found 86). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:110: Line has trailing spaces. [RegexpSingleline]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:114: Missing a Javadoc comment. [JavadocType]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:115:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:117:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:117:9: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:117:29: Parameter first should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:117:40: 'first' hides a field. [HiddenField]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:121: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:121:35: '{' at column 35 should have line break after. [LeftCurly]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:122: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:122:35: '{' at column 35 should have line break after. [LeftCurly]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:124:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:125: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Bag.java:127: Line has trailing spaces. [RegexpSingleline]
-Audit done.
-Checkstyle ends with 28 errors.
-Starting audit...
 Audit done.
 Starting audit...
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\EdgeWeightedGraph.java:164:5: Class 'EdgeWeightedGraph' looks like designed for extension (can be subclassed), but the method 'toString' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'EdgeWeightedGraph' final or making the method 'toString' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\EdgeWeightedGraph.java:164:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\EdgeWeightedGraph.java:167:18: 'v' hides a field. [HiddenField]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\EdgeWeightedGraph.java:169:23: 'e' hides a field. [HiddenField]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\DijkstraUndirectedSP.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
-Checkstyle ends with 4 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 Audit done.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:5: Line has trailing spaces. [RegexpSingleline]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:9: Line has trailing spaces. [RegexpSingleline]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:29: Line is longer than 80 characters (found 95). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:32: Line is longer than 80 characters (found 105). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:41:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:42:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:43:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:46: Missing a Javadoc comment. [JavadocType]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:47:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:48:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:85: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:94:25: Parameter item should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:99: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:100: 'else' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:111: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:115: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:131: Line has trailing spaces. [RegexpSingleline]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:134: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:136: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:139: Line has trailing spaces. [RegexpSingleline]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:143: Missing a Javadoc comment. [JavadocType]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:144:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:146:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:146:9: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:146:29: Parameter first should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:146:40: 'first' hides a field. [HiddenField]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:150: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:150:35: '{' at column 35 should have line break after. [LeftCurly]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:151: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:151:35: '{' at column 35 should have line break after. [LeftCurly]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:153:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:154: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Queue.java:156: Line has trailing spaces. [RegexpSingleline]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\IndexMinPQ.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
-Checkstyle ends with 33 errors.
+Checkstyle ends with 1 errors.
+Starting audit...
+Audit done.
+Starting audit...
+Audit done.
 Starting audit...
 [ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Solution.java:2: Missing a Javadoc comment. [JavadocType]
@@ -90,72 +28,5 @@ Starting audit...
 [ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\Solution.java:42: Line is longer than 80 characters (found 110). [LineLength]
 Audit done.
 Checkstyle ends with 9 errors.
-Starting audit...
-Audit done.
-Starting audit...
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:18: Line is longer than 80 characters (found 106). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:19: Line is longer than 80 characters (found 114). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:24:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:27:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:30:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:35: Line is longer than 80 characters (found 82). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:36:9: '}' at column 9 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:37:48: '{' at column 48 should have line break after. [LeftCurly]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:41:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:61:32: Parameter x should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:61:39: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:68:32: Parameter x should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:68:40: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:75:32: Parameter x should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:75:37: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:82:32: Parameter x should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:82:39: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:89:32: Parameter x should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:89:38: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:96:32: Parameter x should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:96:36: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:103:32: Parameter x should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:103:37: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:110:32: Parameter x should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:110:38: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:117:32: Parameter x should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:117:37: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:131:30: Parameter x should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:131:37: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:139:30: Parameter x should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:139:38: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:147:30: Parameter x should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:147:35: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:155:30: Parameter x should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:155:37: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:163:30: Parameter x should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:163:36: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:171:30: Parameter x should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:171:34: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:179:30: Parameter x should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:179:35: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:187:30: Parameter x should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:187:36: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:195:30: Parameter x should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:195:35: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:204:31: Parameter format should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:204:38: Expected @param tag for 'format'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:204:46: Parameter args should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:204:56: Expected @param tag for 'args'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:213:31: Parameter locale should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:213:38: Expected @param tag for 'locale'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:213:46: Parameter format should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:213:53: Expected @param tag for 'format'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:213:61: Parameter args should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:213:71: Expected @param tag for 'args'. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:219:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:219:29: Parameter args should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:223:24: '17' is a magic number. [MagicNumber]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:225:36: '/' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:225:37: '/' is not followed by whitespace. [WhitespaceAround]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m12\ADS-2_Exam-2\StdOut.java:225:37: '7.0' is a magic number. [MagicNumber]
-Audit done.
-Checkstyle ends with 62 errors.
 Starting audit...
 Audit done.

@@ -2,12 +2,12 @@
  * Class for edge.
  */
 public class Edge implements Comparable<Edge> {
-   /**
-    * vertex v.
-    */
+    /**
+     * vertex 1.
+     */
     private final int v;
     /**
-     * vertex w.
+     * vertex 2.
      */
     private final int w;
     /**
@@ -47,7 +47,6 @@ public class Edge implements Comparable<Edge> {
      * Returns the weight of this edge.
      *
      * @return the weight of this edge
-     * Time complexity for this method is O(1).
      */
     public double weight() {
         return weight;
@@ -57,24 +56,22 @@ public class Edge implements Comparable<Edge> {
      * Returns either endpoint of this edge.
      *
      * @return either endpoint of this edge
-     * Time complexity for this method is O(1).
      */
     public int either() {
         return v;
     }
 
     /**
-     * Returns the endpoint of this edge that is different
-     * from the given vertex.
+     * Returns the endpoint of this
+     * edge that is different from the given vertex.
      *
      * @param  vertex one endpoint of this edge
      * @return the other endpoint of this edge
      * @throws IllegalArgumentException if the vertex is not one of the
      *         endpoints of this edge
-     * Time complexity for this method is O(1).
      */
     public int other(final int vertex) {
-        if (vertex == v) {
+        if      (vertex == v) {
             return w;
         } else if (vertex == w) {
             return v;
@@ -82,24 +79,31 @@ public class Edge implements Comparable<Edge> {
             throw new IllegalArgumentException("Illegal endpoint");
         }
     }
+
     /**
      * Compares two edges by weight.
      * Note that {@code compareTo()} is not consistent with {@code equals()},
-     * which uses the reference equality implementation
-     * inherited from {@code Object}.
+     * which uses the reference equality
+     * implementation inherited from {@code Object}.
      *
      * @param  that the other edge
-     * @return a negative integer, zero, or positive
-     * integer depending on whether
+     * @return a negative integer, zero,
+     * or positive integer depending on whether
      *         the weight of this is less than, equal to, or greater than the
      *         argument edge
-     * Time complexity for this method is O(1).
      */
     @Override
     public int compareTo(final Edge that) {
         return Double.compare(this.weight, that.weight);
     }
+
+    /**
+     * Returns a string representation of this edge.
+     *
+     * @return a string representation of this edge
+     */
+    public String toString() {
+        return String.format("%d-%d %.5f", v, w, weight);
+    }
+
 }
-
-
-

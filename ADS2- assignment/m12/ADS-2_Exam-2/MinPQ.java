@@ -1,29 +1,34 @@
 import java.util.Comparator;
+import java.util.ArrayList;
 /**
  * Class for minimum pq.
+ *
  * @param      <Key>  The key
  */
 public class MinPQ<Key> {
     /**
-     * pq array of type Key.
+     * stores items from 1 to n.
      */
     private Key[] pq;
     /**
-     * size of array pq.
+     * Number of items on priority queue.
      */
     private int n;
     /**
-     * comparator of type Comparator.
+     * Comparator variable.
      */
     private Comparator<Key> comparator;
+
     /**
      * Initializes an empty priority queue with the given initial capacity.
+     *
      * @param  initCapacity the initial capacity of this priority queue
      */
     public MinPQ(final int initCapacity) {
         pq = (Key[]) new Object[initCapacity + 1];
         n = 0;
     }
+
     /**
      * Initializes an empty priority queue.
      */
@@ -31,83 +36,48 @@ public class MinPQ<Key> {
         this(1);
     }
     /**
-     * Initializes an empty priority queue with the given initial capacity,
-     * using the given comparator.
-     * @param  initCapacity the initial capacity of this priority queue
-     * @param  comparatorr the order in which to compare the keys
-     */
-    public MinPQ(final int initCapacity, final Comparator<Key> comparatorr) {
-        this.comparator = comparatorr;
-        pq = (Key[]) new Object[initCapacity + 1];
-        n = 0;
-    }
-    /**
-     * Initializes an empty priority queue using the given comparator.
-     * @param  comparatorr the order in which to compare the keys
-     */
-    public MinPQ(final Comparator<Key> comparatorr) {
-        this(1, comparatorr);
-    }
-    /**
-     * Initializes a priority queue from the array of keys.
-     * Takes time proportional to the number of keys,
-     * using sink-based heap construction.
-     * @param  keys the array of keys
-     */
-    public MinPQ(final Key[] keys) {
-        n = keys.length;
-        pq = (Key[]) new Object[keys.length + 1];
-        for (int i = 0; i < n; i++) {
-            pq[i + 1] = keys[i];
-        }
-        for (int k = n / 2; k >= 1; k--) {
-            sink(k);
-        }
-    }
-    /**
-     * Returns true if this priority queue is empty.
-     * @return {@code true} if this priority queue is empty;
-     *         {@code false} otherwise
-     * time complexity is O(1)
+     * Determines if empty.
+     *
+     * @return     True if empty, False otherwise.
      */
     public boolean isEmpty() {
         return n == 0;
     }
+
     /**
      * Returns the number of keys on this priority queue.
+     *
      * @return the number of keys on this priority queue
-     * time complexity is O(1)
      */
     public int size() {
         return n;
     }
+
     /**
      * Returns a smallest key on this priority queue.
-     * @return a smallest key on this priority queue.
-     * time complexity is O(1)
+     *
+     * @return a smallest key on this priority queue
      */
     public Key min() {
-        if (isEmpty()) {
-            return null;
-        }
         return pq[1];
     }
     /**
-     * resize method to resize the array.
+     * Resizing function.
+     *
      * @param      capacity  The capacity
      */
     private void resize(final int capacity) {
-        assert capacity > n;
         Key[] temp = (Key[]) new Object[capacity];
         for (int i = 1; i <= n; i++) {
             temp[i] = pq[i];
         }
         pq = temp;
     }
+
     /**
      * Adds a new key to this priority queue.
+     *
      * @param  x the key to add to this priority queue
-     * time complexity is O(log(n))
      */
     public void insert(final Key x) {
         if (n == pq.length - 1) {
@@ -116,62 +86,61 @@ public class MinPQ<Key> {
         pq[++n] = x;
         swim(n);
     }
+
     /**
      * Removes and returns a smallest key on this priority queue.
+     *
      * @return a smallest key on this priority queue
-     * time complexity is O(log(n))
      */
     public Key delMin() {
-        if (isEmpty()) {
-            return null;
-        }
+        final int four = 4;
         Key min = pq[1];
         exch(1, n--);
         sink(1);
         pq[n + 1] = null;
-        final int four = 4;
         if ((n > 0) && (n == (pq.length - 1) / four)) {
             resize(pq.length / 2);
         }
         return min;
     }
     /**
-     * swim method.
-     * @param      k    index.
-     * time complexity is O(log(n))
-     */
-    private void swim(final int k) {
-        int k1 = k;
-        while (k1 > 1 && greater(k1 / 2, k1)) {
-            exch(k1, k1 / 2);
-            k1 = k1 / 2;
+    * Swim function.
+    *
+    * @param      k1     { parameter_description }
+    */
+    private void swim(final int k1) {
+        int k = k1;
+        while (k > 1 && greater(k / 2, k)) {
+            exch(k, k / 2);
+            k = k / 2;
         }
     }
     /**
-     * sink method.
-     * @param      k    index.
-     * time complexity is O(log(n))
+     * Sink function.
+     *
+     * @param      k1     { parameter_description }
      */
-    private void sink(final int k) {
-        int k1 = k;
-        while (2 * k1 <= n) {
-            int j = 2 * k1;
+    private void sink(final int k1) {
+        int k = k1;
+        while (2 * k <= n) {
+            int j = 2 * k;
             if (j < n && greater(j, j + 1)) {
                 j++;
             }
-            if (!greater(k1, j)) {
+            if (!greater(k, j)) {
                 break;
             }
-            exch(k1, j);
-            k1 = j;
+            exch(k, j);
+            k = j;
         }
     }
     /**
-     * greater method.
-     * @param      i     index.
-     * @param      j     index.
-     * @return     true or false.
-     * time complexity is O(1)
+     * Checks if greater.
+     *
+     * @param      i     { parameter_description }
+     * @param      j     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
      */
     private boolean greater(final int i, final int j) {
         if (comparator == null) {
@@ -181,42 +150,30 @@ public class MinPQ<Key> {
         }
     }
     /**
-     * exch method to swap the elements.
-     * @param      i     index.
-     * @param      j     index.
-     * time complexity is O(1)
+     * Exchange function.
+     *
+     * @param      i     { parameter_description }
+     * @param      j1     { parameter_description }
      */
-    private void exch(final int i, final int j) {
+    private void exch(final int i, final int j1) {
+        int j = j1;
         Key swap = pq[i];
         pq[i] = pq[j];
         pq[j] = swap;
     }
+
     /**
-     * Determines if minimum heap.
-     * @return     True if minimum heap, False otherwise.
-     * time complexity is O(1)
+     * Prints the minimum 5 of the PQ.
+     *
+     * @param      worst  The worst
      */
-    private boolean isMinHeap() {
-        return isMinHeap(1);
-    }
-    /**
-     * Determines if minimum heap.
-     * @param      k     index.
-     * @return     True if minimum heap, False otherwise.
-     * time complexity is O(1)
-     */
-    private boolean isMinHeap(final int k) {
-        if (k > n) {
-            return true;
+    public void print5(final ArrayList<Key> worst) {
+        final int five = 5;
+        for (int i = 1; i <= five; i++) {
+            Key temp = delMin();
+            System.out.println(temp);
+            worst.add(temp);
         }
-        int left = 2 * k;
-        int right = 2 * k + 1;
-        if (left  <= n && greater(k, left)) {
-            return false;
-        }
-        if (right <= n && greater(k, right)) {
-            return false;
-        }
-        return isMinHeap(left) && isMinHeap(right);
+        System.out.print("\n");
     }
 }

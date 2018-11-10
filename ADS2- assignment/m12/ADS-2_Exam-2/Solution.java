@@ -9,20 +9,23 @@ public class Solution {
 		int vertices = Integer.parseInt(sc.nextLine());
 		int edges = Integer.parseInt(sc.nextLine());
 		EdgeWeightedGraph wg = new EdgeWeightedGraph(vertices);
-		while (sc.hasNextLine()) {
-            String[] line = sc.nextLine().split(" ");
-            Edge e = new Edge(Integer.parseInt(line[0]),
-                Integer.parseInt(line[1]), Double.parseDouble(line[2]));
-            wg.addEdge(e);
+		while (edges > 0) {
+            String[] tokens = sc.nextLine().split(" ");
+      		int a = Integer.parseInt(tokens[0]);
+      		int b = Integer.parseInt(tokens[1]);
+      		double weight = Double.parseDouble(tokens[2]);
+      		Edge e = new Edge(a, b, weight);
+      		wg.addEdge(e);
+      		edges--;
         }
 
 
 
-		String caseToGo = null;
+		String caseToGo = sc.nextLine();
 		switch (caseToGo) {
 		case "Graph":
 			//Print the Graph Object.
-			System.out.println(wg.toString());
+			System.out.println(wg);
 			break;
 
 		case "DirectedPaths":

@@ -65,7 +65,12 @@ public final class Solution {
       int source1 = Integer.parseInt(token[0]);
       int via = Integer.parseInt(token[1]);
       int destination1 = Integer.parseInt(token[2]);
-      System.out.println("No Path Found.");
+      DijkstraUndirectedSP objectDSP1 = new DijkstraUndirectedSP(ewg, source1);
+      if (objectDSP1.hasPathTo(destination1)) {
+        System.out.println(objectDSP1.distTo(destination1));
+      } else {
+        System.out.println("No Path Found.");
+      }
       break;
 
     default:

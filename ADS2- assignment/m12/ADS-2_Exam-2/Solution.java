@@ -15,7 +15,6 @@ public class Solution {
                 Integer.parseInt(line[1]), Double.parseDouble(line[2]));
             wg.addEdge(e);
         }
-        KruskalMST k = new KruskalMST(wg);
 
 
 
@@ -31,6 +30,8 @@ public class Solution {
 			// First is the source and second is the destination.
 			// If the path exists print the distance between them.
 			// Other wise print "No Path Found."
+			KruskalMST k = new KruskalMST(wg);
+        	System.out.format("%.5f", k.weight());
 			break;
 
 		case "ViaPaths":

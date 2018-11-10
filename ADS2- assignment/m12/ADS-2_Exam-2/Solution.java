@@ -61,6 +61,10 @@ public final class Solution {
       // third is the destination.
       // If the path exists print the distance between them.
       // Other wise print "No Path Found."
+      String[] token = sc.nextLine().split(" ");
+      int source1 = Integer.parseInt(token[0]);
+      int via = Integer.parseInt(token[1]);
+      int destination1 = Integer.parseInt(token[2]);
       System.out.println("No Path Found.");
       break;
 

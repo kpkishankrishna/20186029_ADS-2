@@ -1,0 +1,49 @@
+Starting audit...
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:8: Line has trailing spaces. [RegexpSingleline]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:34: Line has trailing spaces. [RegexpSingleline]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:35: Line has trailing spaces. [RegexpSingleline]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:38: Line is longer than 80 characters (found 82). [LineLength]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:43: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:45: Line is longer than 80 characters (found 105). [LineLength]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:54:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:55:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:58: Missing a Javadoc comment. [JavadocType]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:59:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:60:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:95:21: Parameter item should be final. [FinalParameters]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:105: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:107: Line is longer than 80 characters (found 86). [LineLength]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:110: Line has trailing spaces. [RegexpSingleline]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:114: Missing a Javadoc comment. [JavadocType]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:115:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:117:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:117:9: Redundant 'public' modifier. [RedundantModifier]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:117:29: Parameter first should be final. [FinalParameters]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:117:40: 'first' hides a field. [HiddenField]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:121: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:121:35: '{' at column 35 should have line break after. [LeftCurly]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:122: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:122:35: '{' at column 35 should have line break after. [LeftCurly]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:124:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:125: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\Bag.java:127: Line has trailing spaces. [RegexpSingleline]
+Audit done.
+Checkstyle ends with 28 errors.
+Starting audit...
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\DijkstraSP.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+Audit done.
+Checkstyle ends with 1 errors.
+Starting audit...
+Audit done.
+Starting audit...
+Audit done.
+Starting audit...
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\IndexMinPQ.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\IndexMinPQ.java:265:23: Parameter k should be final. [FinalParameters]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m8\1. Shortest Paths\IndexMinPQ.java:277:23: Parameter k should be final. [FinalParameters]
+Audit done.
+Checkstyle ends with 3 errors.
+Starting audit...
+Audit done.
+Starting audit...
+Audit done.

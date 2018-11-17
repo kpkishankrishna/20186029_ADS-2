@@ -176,8 +176,27 @@ class T9 {
   public Iterable<String> getSuggestions(final Iterable<String> words,
                                          final int k) {
     // your code goes here
-    return null;
-  }
+ //    String[] wor = new String[k];
+	// MaxPQ<Word> p = new MaxPQ<Word>();
+	// for(String each: words){
+	// int val = tst.get(each);
+	// p.insert(new Word(each,val));
+	// }
+	// Bag<String> bag = new Bag<String>();
+	// int j =0;
+	// for(int i =0;i<k;i++){
+	// Word max = p.delMax();
+	// wor[j] = max.getKey();
+	// //bag.add(max.getKey());
+	// j++;
+	// }
+	// Arrays.sort(wor);
+	// for(int i=k-1;i>=0;i--){
+	// bag.add(wor[i]);
+	// }
+	// return bag;
+ 	return null;
+}
 
   // final output
   // Don't modify this method.

@@ -103,36 +103,76 @@ public class Solution {
 }
 
 class T9 {
+  /**
+   * private TST object.
+   */
+  private TST<Integer> words;
+  /**
+   * Constructs the object.
+   *
+   * @param      st    symbol table.
+   */
+  public T9(final BinarySearchST<String, Integer> st) {
+    // your code goes here
 
-	public T9(BinarySearchST<String, Integer> st) {
-		// your code goes here
-		TST words = new TST();
+    words = new TST();
 
-	    for (String each : st.keys()) {
-	      words.put(each, st.get(each));
-	    }
-	}
+    for (String each : st.keys()) {
+      words.put(each, st.get(each));
+    }
+  }
 
-	// get all the prefixes that match with given prefix.
-	public Iterable<String> getAllWords(String prefix) {
-		// your code goes here
-		return null;
-	}
+  /**
+   * Gets all words.
+   *
+   * @param      prefix  The prefix
+   *
+   * @return     All words.
+   */
+  public Iterable<String> getAllWords(final String prefix) {
+    // your code goes here
+    return words.keysWithPrefix(prefix);
+  }
+  /**
+   * checks for potential words.
+   *
+   * @param      t9Signature  The t 9 signature
+   *
+   * @return     potential words iterable
+   */
+  public Iterable<String> potentialWords(final String t9Signature) {
+    // your code goes here
+    return null;
+  }
 
-	public Iterable<String> potentialWords(String t9Signature) {
-		// your code goes here
-		return null;
-	}
+  // return all possibilities(words), find top k with highest frequency.
 
-	// return all possibilities(words), find top k with highest frequency.
-	public Iterable<String> getSuggestions(Iterable<String> words, int k) {
-		// your code goes here
-		return null;
-	}
+  /**
+   * Gets the suggestions.
+   *
+   * @param      words  The words
+   * @param      k      The int
+   *
+   * @return     The suggestions.
+   */
+  public Iterable<String> getSuggestions(final Iterable<String> words,
+                                         final int k) {
+    // your code goes here
+    return null;
+  }
 
-	// final output
-	// Don't modify this method.
-	public Iterable<String> t9(String t9Signature, int k) {
-		return getSuggestions(potentialWords(t9Signature), k);
-	}
+  // final output
+  // Don't modify this method.
+
+  /**
+   * t9 dictionary.
+   *
+   * @param      t9Signature  The t 9 signature
+   * @param      k            { parameter_description }
+   *
+   * @return     returns iterrable string.
+   */
+  public Iterable<String> t9(final String t9Signature, final int k) {
+    return getSuggestions(potentialWords(t9Signature), k);
+  }
 }

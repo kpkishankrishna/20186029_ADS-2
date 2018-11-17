@@ -149,6 +149,7 @@ class T9 {
    */
   public Iterable<String> getAllWords(final String prefix) {
     // your code goes here
+    int k = 0;
     return words.keysWithPrefix(prefix);
   }
   /**

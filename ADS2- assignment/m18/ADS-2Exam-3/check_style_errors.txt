@@ -388,7 +388,7 @@ Starting audit...
 [ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:104:70: Parameter file should be final. [FinalParameters]
 [ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:105: Line is longer than 80 characters (found 92). [LineLength]
 [ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:133:3: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:176:65: 'words' hides a field. [HiddenField]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:177:65: 'words' hides a field. [HiddenField]
 Audit done.
 Checkstyle ends with 14 errors.
 Starting audit...

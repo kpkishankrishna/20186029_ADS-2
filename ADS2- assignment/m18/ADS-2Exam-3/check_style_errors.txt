@@ -376,24 +376,21 @@ Audit done.
 Checkstyle ends with 33 errors.
 Starting audit...
 [ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:4: Missing a Javadoc comment. [JavadocType]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:4:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:7:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:7:33: Parameter args should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:14: Line is longer than 80 characters (found 95). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:38: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:83:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:83:43: Parameter file should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:88: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:88:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:88:70: Parameter file should be final. [FinalParameters]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:89: Line is longer than 80 characters (found 92). [LineLength]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:105: Missing a Javadoc comment. [JavadocType]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:115:3: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:158:65: 'words' hides a field. [HiddenField]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:2: Missing a Javadoc comment. [JavadocType]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:2:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:4:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:9: Line has trailing spaces. [RegexpSingleline]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:10:33: Parameter args should be final. [FinalParameters]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:17: Line is longer than 80 characters (found 95). [LineLength]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:41: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:92:43: Parameter file should be final. [FinalParameters]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:104: Line is longer than 80 characters (found 83). [LineLength]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:104:70: Parameter file should be final. [FinalParameters]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:105: Line is longer than 80 characters (found 92). [LineLength]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:133:3: Redundant 'public' modifier. [RedundantModifier]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\Solution.java:176:65: 'words' hides a field. [HiddenField]
 Audit done.
-Checkstyle ends with 17 errors.
+Checkstyle ends with 14 errors.
 Starting audit...
 [ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\TST.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m18\ADS-2Exam-3\TST.java:46: Line is longer than 80 characters (found 84). [LineLength]

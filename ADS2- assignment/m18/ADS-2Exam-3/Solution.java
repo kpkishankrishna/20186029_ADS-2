@@ -1,9 +1,12 @@
 import java.util.Scanner;
-
-
 public class Solution {
 
-	// Don't modify this method.
+	/**
+	 * main function.
+	 *
+	 * @param      args  The arguments
+	 */
+	
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String cases = scan.nextLine();
@@ -79,11 +82,24 @@ public class Solution {
 		}
 	}
 
-	// Don't modify this method.
+	/**
+	 * Read file.
+	 *
+	 * @param      file  The file
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public static String[] toReadFile(String file) {
 		In in = new In(file);
 		return in.readAllStrings();
 	}
+	/**
+	 * Loads a dictionary.
+	 *
+	 * @param      file  The file
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 
 	public static BinarySearchST<String, Integer> loadDictionary(String file) {
 		BinarySearchST<String, Integer>  st = new BinarySearchST<String, Integer>();
@@ -101,7 +117,9 @@ public class Solution {
 	}
 
 }
-
+/**
+ * Class for t 9.
+ */
 class T9 {
   /**
    * private TST object.

@@ -1,0 +1,22 @@
+Starting audit...
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m16\boggle\BoggleSolver.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m16\boggle\BoggleSolver.java:74:8: Unused @param tag for 'str'. [JavadocMethod]
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m16\boggle\BoggleSolver.java:79:35: Expected @param tag for 's'. [JavadocMethod]
+Audit done.
+Checkstyle ends with 3 errors.
+Starting audit...
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m16\boggle\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+Audit done.
+Checkstyle ends with 1 errors.
+Starting audit...
+[ERROR] E:\study\20186029_ADS-2\ADS2- assignment\m16\boggle\TrieST.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+Audit done.
+Checkstyle ends with 1 errors.
+Files to process must be specified, found 0.
+Files to process must be specified, found 0.
+Files to process must be specified, found 0.
+Files to process must be specified, found 0.
+Files to process must be specified, found 0.
+Files to process must be specified, found 0.
+Files to process must be specified, found 0.
+Files to process must be specified, found 0.

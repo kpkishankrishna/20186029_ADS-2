@@ -1,35 +1,30 @@
 import java.util.Scanner;
-/**
+/**.
  * Class for solution.
  */
-final class Solution {
-    /**
+public final class Solution {
+    /**.
      * Constructs the object.
      */
-    private Solution() {
-    }
-    /**
-     * main method to drive the program.
+    private Solution() { }
+    /**.
+     * { item_description }
+     *
      * @param      args  The arguments
-     * Time complexity for this method is O(N) where
-     * N is no of lines.
      */
     public static void main(final String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int vertices = Integer.parseInt(sc.nextLine());
-        int edges = Integer.parseInt(sc.nextLine());
-        EdgeWeightedGraph wg = new EdgeWeightedGraph(vertices);
-        while (sc.hasNextLine()) {
-            String[] line = sc.nextLine().split(" ");
-            Edge e = new Edge(Integer.parseInt(line[0]),
-                Integer.parseInt(line[1]), Double.parseDouble(line[2]));
-            wg.addEdge(e);
+        Scanner in = new Scanner(System.in);
+        int vert = Integer.parseInt(in.nextLine());
+        int testcases = Integer.parseInt(in.nextLine());
+        EdgeWeightedGraph wtEdge = new EdgeWeightedGraph(vert);
+        for (int i = 0; i < testcases; i++) {
+            String[] inp = in.nextLine().split(" ");
+            wtEdge.addEdge(new Edge(Integer.parseInt(
+                                        inp[0]), Integer.parseInt(
+                                        inp[1]), Double.valueOf(inp[2])));
         }
-        KruskalMST k = new KruskalMST(wg);
-        System.out.format("%.5f", k.weight());
+        PrimMST p =  new PrimMST(wtEdge);
+        // System.out.println(p.edges());
+        System.out.format("%.5f", p.weight());
     }
 }
-
-
-
-

@@ -1,67 +1,39 @@
-/******************************************************************************
- *  Compilation:  javac Bag.java
- *  Execution:    java Bag < input.txt
- *  Dependencies: StdIn.java StdOut.java
- *
- *  A generic bag or multiset, implemented using a singly-linked list.
- *
- *  % more tobe.txt 
- *  to be or not to - be - - that - - - is
- *
- *  % java Bag < tobe.txt
- *  size of bag = 14
- *  is
- *  -
- *  -
- *  -
- *  that
- *  -
- *  -
- *  be
- *  -
- *  to
- *  not
- *  or
- *  be
- *  to
- *
- ******************************************************************************/
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-
 /**
- *  The {@code Bag} class represents a bag (or multiset) of 
- *  generic items. It supports insertion and iterating over the 
- *  items in arbitrary order.
- *  <p>
- *  This implementation uses a singly-linked list with a static nested class Node.
- *  See {@link LinkedBag} for the version from the
- *  textbook that uses a non-static nested class.
- *  See {@link ResizingArrayBag} for a version that uses a resizing array.
- *  The <em>add</em>, <em>isEmpty</em>, and <em>size</em> operations
- *  take constant time. Iteration takes time proportional to the number of items.
- *  <p>
- *  For additional documentation, see <a href="http://algs4.cs.princeton.edu/13stacks">Section 1.3</a> of
- *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
+ * Class for bag.
  *
- *  @author Robert Sedgewick
- *  @author Kevin Wayne
- *
- *  @param <Item> the generic type of an item in this bag
+ * @param      <Item>  The item
  */
 public class Bag<Item> implements Iterable<Item> {
-    private Node<Item> first;    // beginning of bag
-    private int n;               // number of elements in bag
+    /**
+     * Begginning of the Bag.
+     */
+    private Node<Item> first;
+    /**.
+     * // number of elements in bag.
+     */
+    private int n;
 
-    // helper linked list class
+    /**
+     * Class for node.
+     *
+     * @param      <Item>  The item
+     */
     private static class Node<Item> {
+        /**
+         * Item of Node.
+         */
         private Item item;
+        /**
+         * next of node.
+         */
         private Node<Item> next;
     }
 
     /**
      * Initializes an empty bag.
+     * Complexity: O(1)
      */
     public Bag() {
         first = null;
@@ -70,6 +42,8 @@ public class Bag<Item> implements Iterable<Item> {
 
     /**
      * Returns true if this bag is empty.
+     *
+     * Complexity: O(1)
      *
      * @return {@code true} if this bag is empty;
      *         {@code false} otherwise
@@ -81,6 +55,8 @@ public class Bag<Item> implements Iterable<Item> {
     /**
      * Returns the number of items in this bag.
      *
+     * Complexity: O(1)
+     *
      * @return the number of items in this bag
      */
     public int size() {
@@ -90,9 +66,11 @@ public class Bag<Item> implements Iterable<Item> {
     /**
      * Adds the item to this bag.
      *
+     * Complexity: O(1)
+     *
      * @param  item the item to add to this bag
      */
-    public void add(Item item) {
+    public void add(final Item item) {
         Node<Item> oldfirst = first;
         first = new Node<Item>();
         first.item = item;
@@ -102,49 +80,69 @@ public class Bag<Item> implements Iterable<Item> {
 
 
     /**
-     * Returns an iterator that iterates over the items in this bag in arbitrary order.
+     * iterator.
      *
-     * @return an iterator that iterates over the items in this bag in arbitrary order
+     * Complexity: O(E), where E is the edge of graph
+     *
+     * @return     { description_of_the_return_value }
      */
     public Iterator<Item> iterator()  {
-        return new ListIterator<Item>(first);  
-    }
-
-    // an iterator, doesn't implement remove() since it's optional
-    private class ListIterator<Item> implements Iterator<Item> {
-        private Node<Item> current;
-
-        public ListIterator(Node<Item> first) {
-            current = first;
-        }
-
-        public boolean hasNext()  { return current != null;                     }
-        public void remove()      { throw new UnsupportedOperationException();  }
-
-        public Item next() {
-            if (!hasNext()) throw new NoSuchElementException();
-            Item item = current.item;
-            current = current.next; 
-            return item;
-        }
+        return new ListIterator<Item>(first);
     }
 
     /**
-     * Unit tests the {@code Bag} data type.
+     * Class for list iterator.
      *
-     * @param args the command-line arguments
+     * @param      <Item>  The item
      */
-/*    public static void main(String[] args) {
-        Bag<String> bag = new Bag<String>();
-        while (!StdIn.isEmpty()) {
-            String item = StdIn.readString();
-            bag.add(item);
+    private class ListIterator<Item> implements Iterator<Item> {
+        /**
+         * current node.
+         */
+        private Node<Item> current;
+        /**
+         * Constructs the object.
+        *
+        * Complexity: O(1)
+         *
+         * @param      firs The first
+         */
+        ListIterator(final Node<Item> firs) {
+            current = firs;
+        }
+        /**
+         * Determines if it has next.
+        *
+        * Complexity: O(1)
+         *
+         * @return     True if has next, False otherwise.
+         */
+        public boolean hasNext() {
+            return current != null;
+        }
+        /**
+         * remove function.
+        *
+        * Complexity: O(1)
+         */
+        public void remove() {
+            throw new UnsupportedOperationException();
         }
 
-        StdOut.println("size of bag = " + bag.size());
-        for (String s : bag) {
-            StdOut.println(s);
+        /**
+         * next to iterate.
+        *
+        * Complexity: O(1)
+         *
+         * @return      Item
+         */
+        public Item next() {
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
+            Item item = current.item;
+            current = current.next;
+            return item;
         }
-    }*/
-
+    }
 }

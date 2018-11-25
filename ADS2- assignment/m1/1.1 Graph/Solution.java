@@ -1,273 +1,82 @@
 import java.util.Scanner;
-/**
- *the class is to maintain the.
- *graph representation of matrix.
+import java.util.HashMap;
+
+/**.
+ * Class for solution.
  */
-class GraphMat {
-    /**
-     *the tokens array is to.
-     *store all the keys.
+public final class Solution {
+    /**.
+     * Constructs the object.
      */
-    private String[] tokens;
-    /**
-     *matrix to store the realtion.
-     *between two vertices.
-     */
-    private int[][] matrix;
-    /**
-     *the variable to store number.
-     *of vertices.
-     */
-    private int vertices;
-    /**
-     *the variable to store edges of graph.
-     */
-    private int edges;
-    /**
-     *the constructor to initialize the.
-     *class variables.
-     */
-    GraphMat() {
-        edges = 0;
-    }
-    /**
-     *the override constructor to.
-     *maintian the complete graph
-     *design.
-     * @param      scan  The scan
-     */
-    GraphMat(final Scanner scan) {
-        this.vertices = Integer.parseInt(scan.nextLine());
-        matrix = new int[vertices][vertices];
-        int edge = Integer.parseInt(scan.nextLine());
-        tokens = scan.nextLine().split(",");
-        for (int i = 0; i < edge; i++) {
-            String[] inputs = scan.nextLine().split(" ");
-            addE(Integer.parseInt(inputs[0]), Integer.parseInt(inputs[1]));
-        }
-    }
-    /**
-     *the method is to add an edge between.
-     *two vertices.
-     * @param      vertexOne  The vertex one
-     * @param      vertexTwo  The vertex two
-     * because we use has next method.
-     */
-    public void addE(final int vertexOne,
-     final int vertexTwo) {
-        if (vertexOne != vertexTwo) {
-            if (!hasEdge(vertexOne, vertexTwo)) {
-                matrix[vertexOne][vertexTwo] = 1;
-                matrix[vertexTwo][vertexOne] = 1;
-                edges++;
-            }
-        }
-    }
-    /**
-     *the method is check whether there is a.
-     *connection between two given vertices.
-     *the time complexity is O(1)
-     * @param      vertexOne  The vertex one
-     * @param      vertexTwo  The vertex two
-     *
-     * @return     True if has edge, False otherwise.
-     */
-    public boolean hasEdge(final int vertexOne,
-        final int vertexTwo) {
-        if (matrix[vertexOne][vertexTwo] == 1) {
-            return true;
-        }
-        return false;
-    }
-    /**
-     *the method is to print the string format.
-     *of graph.
-     *the time complexity will be O(N^2)
-     *N is the vertices here.
-     */
-    public void print() {
-        String str = "";
-        str += vertices + " vertices, " + edges + " edges" + "\n";
-        if (edges > 0) {
-            for (int i = 0; i < matrix.length; i++) {
-                for (int j = 0; j < matrix[0].length; j++) {
-                    str += matrix[i][j] + " ";
-                }
-                str += "\n";
-            }
-            System.out.println(str);
-        } else {
-            str += "No edges";
-            System.out.println(str);
-        }
-    }
-}
-/**
- *the class is to maintain the.
- *list representation of matrix.
- */
-class GraphList {
-    /**
-     *the variable to store number.
-     *of vertices.
-     */
-    private int vertices;
-    /**
-    *the variable to store number.
-    *of edges.
-    */
-    private int edges;
-    /**
-     *the array to store bag of arrays.
-     */
-    private Bag<Integer>[] adj;
-    /**
-     *the variable to store all keys.
-     */
-    private String[] tokens;
-    /**
-     *an empty constructor.
-     */
-    GraphList() {
-    }
-    /**
-     *the constructor is to initialize the input given.
-     *for the graph.
-     *
-     * @param      scan  The scan
-     */
-    GraphList(final Scanner scan) {
-        this.vertices = Integer.parseInt(scan.nextLine());
-        adj = (Bag<Integer>[]) new Bag[vertices];
-        for (int i = 0; i < vertices; i++) {
-            adj[i] = new Bag<Integer>();
-        }
-        int edge = Integer.parseInt(scan.nextLine());
-        tokens = scan.nextLine().split(",");
-        for (int i = 0; i < edge; i++) {
-            String[] inputs = scan.nextLine().split(" ");
-            addEdge(Integer.parseInt(inputs[0]), Integer.parseInt(inputs[1]));
-        }
-    }
-    /**
-     *returns the vertices of graph.
-     *
-     * @return vertices of graph
-     */
-    public int vertices() {
-        return vertices;
-    }
-    /**
-     *returns the edges of graph.
-     *
-     * @return edges of graph
-     */
-    public int edges() {
-        return edges;
-    }
-    /**
-     *the method is to add an edge between.
-     *two vertices.
-     * @param      vertexOne  The vertex one
-     * @param      vertexTwo  The vertex two
-     * the time complexity is O(E)
-     * E denotes the number of edges we have in graph.
-     * because we use has next method.
-     */
-    public void addEdge(final int vertexOne,
-        final int vertexTwo) {
-        if (vertexOne == vertexTwo) {
-            return;
-        }
-        if (!hasEdge(vertexOne, vertexTwo)) {
-            edges++;
-        }
-        adj[vertexOne].add(vertexTwo);
-        adj[vertexTwo].add(vertexOne);
-    }
-    /**
-     *the method is to maintian a iteratable for.
-     *bag
-     *returns an interator.
-     * @param      vertex  The vertex
-     *
-     * @return  iterator.
-     */
-    public Iterable<Integer> adj(final int vertex) {
-        return adj[vertex];
-    }
-    /**
-     *the method is check whether there is a.
-     *connection between two given vertices.
-     *the time complexity is O(E)
-     *E is the number of edges in graph.
-     * @param      vertexOne  The vertex one
-     * @param      vertexTwo  The vertex two
-     *
-     * @return     True if has edge, False otherwise.
-     */
-    public boolean hasEdge(final int vertexOne,
-        final int vertexTwo) {
-        for (int each : adj(vertexOne))  {
-            if (each == vertexTwo) {
-                return true;
-            }
-        }
-        return false;
-    }
-    /**
-     *the method is to print the string format.
-     *of graph.
-     *the time complexity will be O(N^2)
-     *@return string format.
-     */
-    public String toString() {
-        StringBuilder str = new StringBuilder();
-        str.append(vertices + " vertices, " + edges + " edges" + "\n");
-        if (edges > 0) {
-            for (int i = 0; i < vertices; i++) {
-                str.append(tokens[i] + ": ");
-                for (int j : adj[i]) {
-                    str.append(tokens[j] + " ");
-                }
-                str.append("\n");
-            }
-            return str.toString();
-        } else {
-            str.append("No edges");
-            return str.toString();
-        }
-    }
-}
-/**
- *the class for solution.
- */
-final class Solution {
-    /**
-     *an empty constructor.
-     */
-    private Solution() {
-    }
-    /**
-     *the main to read the input.
+    private Solution() { }
+
+    /**.
+     * { function_description }
      *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         String type = scan.nextLine();
-        switch (type) {
-        case "List":
-            GraphList graphObj = new GraphList(scan);
-            System.out.println(graphObj);
-            break;
-        case "Matrix":
-            GraphMat graphMat = new GraphMat(scan);
-            graphMat.print();
-            break;
-        default : break;
+        int vertices = Integer.parseInt(scan.nextLine());
+        int edges = Integer.parseInt(scan.nextLine());
+        HashMap<Integer, String> map = new HashMap<>();
+        ListGraph graph = new ListGraph(vertices);
+        if (vertices == 0 && edges != 0) {
+            System.out.println(vertices + " vertices, " + edges + " edges");
+            System.out.println("No edges");
+            return;
+        }
+        if (edges == 1 && vertices == 1) {
+            System.out.println(vertices + " vertices, " + 0 + " edges");
+            System.out.println("No edges");
+            return;
+        }
+        if (vertices == 0 && edges == 0) {
+            System.out.println(vertices + " vertices, " + edges + " edges");
+            System.out.println("No edges");
+            return;
+        }
+        if (vertices != 0 && edges != 0) {
+            String[] cities = scan.nextLine().split(",");
+            if (type.equals("List")) {
+                for (int i = 0; i < vertices; i++) {
+                    String[] vert = scan.nextLine().split(" ");
+                    map.put(i, cities[i]);
+                    graph.addEdge(Integer.parseInt(
+                                      vert[0]), Integer.parseInt(vert[1]));
+                }
+                String s = graph.toString();
+                String[] numVer = s.split("\\r?\\n");
+                System.out.println(numVer[0]);
+                for (int i = 1; i < numVer.length; i++) {
+                    int j = 0;
+                    String[] c = numVer[i].replaceAll(
+                                     "[:,]", ";").split(";");
+                    for (int k = 0; k < c.length; k++) {
+                        int a = Integer.parseInt(c[k]);
+                        if (j == 0) {
+                            System.out.print(map.get(a) + ": ");
+                        } else {
+                            System.out.print(map.get(a) + " ");
+                        }
+                        j++;
+                    }
+                    System.out.println();
+                }
+
+            } else if (type.equals("Matrix")) {
+                AdjMatrixGraph m = new AdjMatrixGraph(
+                    vertices, edges, cities);
+                for (int k = 0; k < edges; k++) {
+                    String[] tokens = scan.nextLine().split(" ");
+                    m.addEdge(Integer.parseInt(
+                                  tokens[0]), Integer.parseInt(tokens[1]));
+                }
+                System.out.println(m.vertices() + " vertices, "
+                                   + m.edges() + " edges");
+                m.print();
+            }
         }
     }
 }
-
-

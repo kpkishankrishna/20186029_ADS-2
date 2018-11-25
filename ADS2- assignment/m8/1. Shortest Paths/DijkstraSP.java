@@ -1,100 +1,125 @@
-/**
- *the class for dijkstra's algorithm.
- *to find the shortest path.
+import java.util.Stack;
+/**.
+ * Class for dijkstra sp.
  */
 class DijkstraSP {
-    /**
-     *the distTo array to store.
-     *distance from one vertex to another.
+    /**.
+     * { var_description }
      */
-    private Double[] distTo;
-    /**
-     *edge to is to store the edge connected.
+    private double[] distTo;
+    /**.
+     * { var_description }
      */
     private Edge[] edgeTo;
-    /**
-     *indexed minpq to store the key value.
-     *pair.
+    /**.
+     * { var_description }
      */
     private IndexMinPQ<Double> pq;
-    /**
-     *the graph object.
+
+    /**.
+     * Computes a shortest-paths tree from the
+     * source vertex {@code s} to every
+     * other vertex in the edge-weighted digraph {@code G}.
+     * Complexity: O(E.log(V)).
+     *
+     * @param      graph  The graph
+     * @param      s      the source vertex
+     * @throws     IllegalArgumentException  if an edge weight is negative
+     * @throws     IllegalArgumentException  unless {@code 0 <= s < V}
      */
-    private EdgeWeightedGraph graph;
-    /**
-     *the constructor to initialize the objects.
-     *the time complexity is O(E + V).
-     * @param      g  graph object.
-     * @param      source  The source
-     */
-    DijkstraSP(final EdgeWeightedGraph g,
-                final int source) {
-        graph = g;
-        distTo = new Double[graph.vertices()];
-        edgeTo = new Edge[graph.vertices()];
-        for (int i = 0; i < graph.vertices(); i++) {
-            distTo[i] = Double.POSITIVE_INFINITY;
+    DijkstraSP(final EdgeWeightedGraph graph, final int s) {
+        for (Edge e : graph.edges()) {
+            if (e.weight() < 0) {
+                throw new IllegalArgumentException(
+                    "edge " + e + " has negative weight");
+            }
         }
-        distTo[source] = 0.0;
-        pq = new IndexMinPQ<Double>(graph.vertices());
-        pq.insert(source, distTo[source]);
+
+        distTo = new double[graph.vert()];
+        edgeTo = new Edge[graph.vert()];
+
+        validateVertex(s);
+
+        for (int v = 0; v < graph.vert(); v++) {
+            distTo[v] = Double.POSITIVE_INFINITY;
+        }
+        distTo[s] = 0.0;
+
+        // relax vertices in order of distance from s
+        pq = new IndexMinPQ<Double>(graph.vert());
+        pq.insert(s, distTo[s]);
         while (!pq.isEmpty()) {
-            int vertex = pq.delMin();
-            for (Edge edge : graph.adj(vertex)) {
-                relax(edge, vertex);
+            int v = pq.delMin();
+            for (Edge e : graph.adj(v)) {
+                relax(e, v);
             }
         }
     }
-    /**
-     *this method is to relax the edges.
-     *time complexity is O(logE)
-     * @param      edge    The edge
-     * @param      vertex  The vertex
+
+    // relax edge e and update pq if changed
+    /**.
+     * { function_description }
+     * Complexity: O(1).
+     *
+     * @param      e     { parameter_description }
+     * @param      v     { parameter_description }
      */
-    private void relax(final Edge edge,
-    final int vertex) {
-        int vertexTwo = edge.other(vertex);
-        if (distTo[vertexTwo] > distTo[vertex] + edge.weight()) {
-            distTo[vertexTwo] = distTo[vertex] + edge.weight();
-            edgeTo[vertexTwo] = edge;
-            if (pq.contains(vertexTwo)) {
-                pq.decreaseKey(vertexTwo, distTo[vertexTwo]);
+    private void relax(final Edge e, final int v) {
+        int w = e.other(v);
+        if (distTo[w] > distTo[v] + e.weight()) {
+            distTo[w] = distTo[v] + e.weight();
+            edgeTo[w] = e;
+            if (pq.contains(w)) {
+                pq.decreaseKey(w, distTo[w]);
             } else {
-                pq.insert(vertexTwo, distTo[vertexTwo]);
+                pq.insert(w, distTo[w]);
             }
         }
     }
-    /**
-     *the method returns the distance.
-     *from the source to given vertex.
+
+    /**.
+     * Returns the length of a shortest path from the
+     * source vertex {@code s} to vertex {@code v}.
      *
-     * @param      v  vertex
+     * Complexity: O(1).
      *
-     * @return distance between two vertices.
-     * Time complexity is O(1).
+     * @param  v the destination vertex
+     * @return the length of a shortest path from the
+     * source vertex {@code s} to vertex {@code v};
+     *         {@code Double.POSITIVE_INFINITY} if no such path
+     * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
     public double distTo(final int v) {
+        validateVertex(v);
         return distTo[v];
     }
-    /**
-     *whether the path is there or not.
+
+    /**.
+     * Returns true if there is a path from the source vertex to vertex
      *
-     * @param      v another vertex.
+     * Complexity: O(1).
      *
-     * @return     True if has path to, False otherwise.
-     * Time complexity is O(1).
+     * @param  v the destination vertex
+     * @return {@code true} if there is a path from the source vertex
+     *         {@code s} to vertex {@code v}; {@code false} otherwise
+     * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
     public boolean hasPathTo(final int v) {
+        validateVertex(v);
         return distTo[v] < Double.POSITIVE_INFINITY;
     }
-    /**
-     *shortest path to given vertex.
+
+    /**.
+     * Returns a shortest path from the source vertex to vertex
+     * Complexity: O(log(E)).
      *
-     * @param      v  vertex.
-     *time complexity is O(ElogV)
-     * @return shortest path is returned from the source.
+     * @param  v the destination vertex
+     * @return a shortest path from the source vertex to other vertex
+     *         as an iterable of edges, and {@code null} if no such path
+     * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
     public Iterable<Edge> pathTo(final int v) {
+        validateVertex(v);
         if (!hasPathTo(v)) {
             return null;
         }
@@ -106,19 +131,20 @@ class DijkstraSP {
         }
         return path;
     }
-    /**
-     *returns the shortest distance between.
-     *two vertices.
-     *time complexity O(E)
-     * @param      vertex  The vertex
+
+    // throw an IllegalArgumentException unless {@code 0 <= v < V}
+    /**.
+     * { function_description }
+     * Complexity: O(1).
      *
-     * @return shortest distance between two vertices.
+     * @param      v     { parameter_description }
      */
-    public double distance(final int vertex) {
-        double sum = 0;
-        for (Edge each : pathTo(vertex)) {
-            sum += each.weight();
+    private void validateVertex(final int v) {
+        int vert = distTo.length;
+        if (v < 0 || v >= vert) {
+            throw new IllegalArgumentException(
+                "vertex " + v + " is not between 0 and " + (
+                    vert - 1));
         }
-        return sum;
     }
 }

@@ -1,47 +1,47 @@
 import java.util.Scanner;
-import java.util.HashMap;
-/**
- *class for solution.
+import java.util.ArrayList;
+/**.
+ * { item_description }
  */
-final class Solution {
-    /**
-     *an empty constructor.
+public final class Solution {
+    /**.
+     * Constructs the object.
      */
-    private Solution() {
-    }
-    /**
-     *the main method is to read the user.
-     * input.
-     *time complexity is O(E + V)
+    private Solution() { }
+    /**.
+     * { function_description }
+     *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        Scanner sc = new Scanner(System.in);
-        HashMap<String, Integer> map
-        = new HashMap<String, Integer>();
-        String[] tokens = sc.nextLine().split(" ");
-        int edges = Integer.parseInt(tokens[1]);
-        String[] vertices = sc.nextLine().split(" ");
-        for (int i = 0; i < vertices.length; i++) {
-            map.put(vertices[i], i);
+        Scanner in = new Scanner(System.in);
+        String[] rail = in.nextLine().split(" ");
+        ArrayList<String> stationName =
+            new ArrayList<String>();
+        String[] station = in.nextLine().split(" ");
+        for (int i = 0; i < Integer.parseInt(rail[0]); i++) {
+            stationName.add(station[i]);
         }
-        Edge e;
-        EdgeWeightedGraph ewg
-        = new EdgeWeightedGraph(vertices.length);
-        for (int i = 0; i < edges; i++) {
-            String[] directPath = sc.nextLine().split(" ");
-            e = new Edge(map.get(directPath[0]),
-                               map.get(directPath[1]),
-                               Double.parseDouble(directPath[2]));
-            ewg.addEdge(e);
+        EdgeWeightedGraph edge = new EdgeWeightedGraph(
+            Integer.parseInt(rail[0]));
+        // Set<Integer> a = stationName.keySet();
+        // System.out.println("\nKEy Set "+ a);
+        for (int i = 0; i < Integer.parseInt(rail[1]); i++) {
+            String[] c = in.nextLine().split(" ");
+            int vert1 = stationName.indexOf(c[0]);
+            int vert2 = stationName.indexOf(c[1]);
+            edge.addEdge(new Edge(
+                             vert1, vert2, Double.parseDouble(
+                                 c[2])));
         }
-        int queries = Integer.parseInt(sc.nextLine());
-        DijkstraSP dsp;
+        int queries = Integer.parseInt(in.nextLine());
+        DijkstraSP dj;
         for (int i = 0; i < queries; i++) {
-            String[] check = sc.nextLine().split(" ");
-            int source = map.get(check[0]);
-            dsp = new DijkstraSP(ewg, source);
-            System.out.println((int) dsp.distance(map.get(check[1])));
+            String[] q = in.nextLine().split(" ");
+            int source = stationName.indexOf(q[0]);
+            int destination = stationName.indexOf(q[1]);
+            dj = new DijkstraSP(edge, source);
+            System.out.println((int) dj.distTo(destination));
         }
     }
 }
